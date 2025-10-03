@@ -1,1 +1,152 @@
+# 🍜 Danny's Diner – SQL Case Study
+
+This repository contains my solution to **Case Study #1: Danny’s Diner** from the [8 Week SQL Challenge](https://8weeksqlchallenge.com/case-study-1/).
+---
+## 📊 Business Task
+Danny, the restaurant owner, wants to understand his customers’ visiting patterns, how much they spend, and which menu items are most popular. Using SQL, we answer 10 business questions along with bonus scenarios.
+---
+## 🛠️ Dataset & Schema
+
+Tables used:
+
+* **sales** – purchase records
+* **menu** – menu details
+* **members** – membership program info
+
+**Entity Relationship Diagram (ERD):**
+![Alt text]("C:\Users\Hp\Desktop\PROJECTS\Sql 8week chalenge\Dannies First case\danny case 1 ER.png")
+---
+
+## ❓ Case Study Questions & Answers
+
+### 1. What is the total amount each customer spent at the restaurant?
+
+* Customer A → $76
+* Customer B → $74
+* Customer C → $36
+
+---
+
+### 2. How many days has each customer visited the restaurant?
+
+* Customer A → 4 days
+* Customer B → 6 days
+* Customer C → 2 days
+
+---
+
+### 3. What was the first item purchased by each customer?
+
+* Customer A → Curry, Sushi
+* Customer B → Curry
+* Customer C → Ramen
+
+---
+
+### 4. What is the most purchased item on the menu, and how many times was it purchased?
+
+* Ramen → 8 times (most popular overall)
+
+---
+
+### 5. Which item was the most popular for each customer?
+
+* Customer A → Ramen (3 times)
+* Customer B → Curry, Sushi, Ramen (2 each)
+* Customer C → Ramen (3 times)
+
+---
+
+### 6. Which item was purchased first after becoming a member?
+
+* Customer A → Ramen
+* Customer B → Sushi
+
+---
+
+### 7. Which item was purchased just before becoming a member?
+
+* Customer A → Curry
+* Customer B → Sushi
+
+---
+
+### 8. What is the total items and amount spent before becoming a member?
+
+* Customer A → 2 items, $25
+* Customer B → 3 items, $40
+
+---
+
+### 9. If each $1 spent = 10 points, and Sushi = 2x points, how many points does each customer have?
+
+* Customer A → 860 points
+* Customer B → 940 points
+* Customer C → 360 points
+
+---
+
+### 10. In the first week after joining, members earn 2x points on all items. How many points do A and B have by end of January?
+
+* Customer A → 1520 points
+* Customer B → 1240 points
+
+---
+
+## 🎁 Bonus Questions
+
+### 🔹 Join All The Things
+
+Create a combined dataset:
+
+| customer_id | order_date | product_name | price | member |
+| ----------- | ---------- | ------------ | ----- | ------ |
+| A           | 2021-01-01 | Sushi        | 10    | N      |
+| A           | 2021-01-07 | Curry        | 15    | Y      |
+| A           | 2021-01-10 | Ramen        | 12    | Y      |
+| A           | 2021-01-11 | Ramen        | 12    | Y      |
+| B           | 2021-01-01 | Curry        | 15    | N      |
+| B           | 2021-01-11 | Sushi        | 10    | Y      |
+| B           | 2021-01-16 | Ramen        | 12    | Y      |
+| B           | 2021-02-01 | Ramen        | 12    | Y      |
+| C           | 2021-01-01 | Ramen        | 12    | N      |
+
+---
+
+### 🔹 Rank All The Things
+
+Add ranking of items for each customer **after membership only**:
+
+| customer_id | order_date | product_name | price | member | ranking |
+| ----------- | ---------- | ------------ | ----- | ------ | ------- |
+| A           | 2021-01-01 | Sushi        | 10    | N      | NULL    |
+| A           | 2021-01-07 | Curry        | 15    | Y      | 1       |
+| A           | 2021-01-10 | Ramen        | 12    | Y      | 2       |
+| A           | 2021-01-11 | Ramen        | 12    | Y      | 3       |
+| B           | 2021-01-11 | Sushi        | 10    | Y      | 1       |
+| B           | 2021-01-16 | Ramen        | 12    | Y      | 2       |
+| B           | 2021-02-01 | Ramen        | 12    | Y      | 3       |
+| C           | 2021-01-07 | Ramen        | 12    | N      | NULL    |
+
+---
+
+## ✅ My Solutions
+
+All SQL queries can be found in:
+👉 [Danny_Diner_Case_Study.sql](./Danny_Diner_Case_Study.sql)
+
+The solutions use **CTEs, window functions, aggregations, and joins** to extract insights.
+
+---
+
+## 📚 References
+
+* [8 Week SQL Challenge](https://8weeksqlchallenge.com/case-study-1/)
+
+---
+
+## 👤 Author
+
+**Basavaraj Chakalabbi**
+SQL Enthusiast | Aspiring Data Analyst
 
